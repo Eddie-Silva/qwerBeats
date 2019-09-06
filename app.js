@@ -13,7 +13,8 @@ app.get("/", function(req, res){
 
 
 
-app.listen(3000, function(){
-   console.log("server started");
-   
-})
+const port = process.env.PORT || 3000;
+const ip = process.env.IP || "127.0.0.1";
+app.listen(port,function(){
+    
+});
