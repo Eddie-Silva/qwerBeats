@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Circles</title>
-      <link href="assets/styles/paperstyle.css" rel="stylesheet" type="text/css">
+      <title>Qwerbeat</title>
+		<link href="assets/styles/paperstyle.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
       <!--<script src="assets/javascript/jquery-3.4.1.min.js" type="text/javascript"></script>-->
       <script src="assets/javascript/paper-full.min.js" type="text/javascript"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js" type="text/javascript"></script>
-      <script canvas="myCanvas" type="text/paperscript">
+		<script src="assets/javascript/main.js" type="text/javascript"></script>
+		<script canvas="myCanvas" type="text/paperscript">
+			
 
          var keyData = {
 	q: {
@@ -17,7 +20,7 @@
 	},
 	w: {
 		sound: new Howl({
-  		src: ['ounds/clay.mp3']
+  		src: ['sounds/clay.mp3']
 		}),
 		color: '#2ecc71'
 	},
@@ -202,8 +205,11 @@
 		<canvas id="myCanvas" resize></canvas>
 		
 		<div>
-			<p>Press any letter on keyboad to make a beat.</p>
+			<button class="instructions" onkeypress="dis(this)" autofocus>
+			<h2>Press<br> A-Z</h2>
+		</button>
 		</div>
+		
 
       <script src="assets/javascript/paperapp.js" type="text/javascript"></script>
    </body>
